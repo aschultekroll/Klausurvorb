@@ -1,0 +1,3 @@
+/Users/anne.s.k/Desktop/altklausur/build/CMakeFiles/rebuild_cache.dir
+/Users/anne.s.k/Desktop/altklausur/build/CMakeFiles/edit_cache.dir
+/Users/anne.s.k/Desktop/altklausur/build/CMakeFiles/Main.dir
