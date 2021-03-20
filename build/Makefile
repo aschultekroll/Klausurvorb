@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Main2
+
+# Build rule for target.
+Main2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Main2
+.PHONY : Main2
+
+# fast build rule for target.
+Main2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main2.dir/build.make CMakeFiles/Main2.dir/build
+.PHONY : Main2/fast
+
+#=============================================================================
 # Target rules for targets named Main
 
 # Build rule for target.
@@ -169,6 +182,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+main2.o: main2.cpp.o
+
+.PHONY : main2.o
+
+# target to build an object file
+main2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main2.dir/build.make CMakeFiles/Main2.dir/main2.cpp.o
+.PHONY : main2.cpp.o
+
+main2.i: main2.cpp.i
+
+.PHONY : main2.i
+
+# target to preprocess a source file
+main2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main2.dir/build.make CMakeFiles/Main2.dir/main2.cpp.i
+.PHONY : main2.cpp.i
+
+main2.s: main2.cpp.s
+
+.PHONY : main2.s
+
+# target to generate assembly for a file
+main2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main2.dir/build.make CMakeFiles/Main2.dir/main2.cpp.s
+.PHONY : main2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -178,9 +218,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Main"
+	@echo "... Main2"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... main2.o"
+	@echo "... main2.i"
+	@echo "... main2.s"
 .PHONY : help
 
 

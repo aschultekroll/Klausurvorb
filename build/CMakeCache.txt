@@ -286,6 +286,9 @@ OpenMP_gomp_LIBRARY:FILEPATH=/usr/local/Cellar/gcc/10.2.0_4/lib/gcc/10/libgomp.d
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/local/lib/cmake/boost_headers-1.75.0
 
+//The directory containing a CMake configuration file for boost_mpi.
+boost_mpi_DIR:PATH=boost_mpi_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

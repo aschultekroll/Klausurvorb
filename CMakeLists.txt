@@ -10,11 +10,11 @@ find_package(OpenMP)
 find_package(Boost 1.56.0 REQUIRED)
 find_package(MPI REQUIRED)
 
-#find_package(Boost COMPONENTS mpi)
+find_package(Boost COMPONENTS mpi)
 ##Add Executables###
 
 add_executable(Main main.cpp)
-
+add_executable(Main2 main2.cpp)
 ##Add Librarys###
  #Bsp: add_library(merge mergesort2.cpp)
 
@@ -22,7 +22,10 @@ add_executable(Main main.cpp)
 
 
 
+target_link_libraries(Main2 MPI::MPI_CXX)
+#target_link_libraries(Main Boost::mpi)
 
+target_link_libraries(Main2 Boost::boost OpenMP::OpenMP_CXX)
 target_link_libraries(Main MPI::MPI_CXX)
 #target_link_libraries(Main Boost::mpi)
 
